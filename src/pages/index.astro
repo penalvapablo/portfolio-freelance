@@ -1,81 +1,87 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Image } from '@astrojs/image/components';
+import foto from '../Assets/Foto3.jpg';
+import { proyectos } from '../components/proyectos.json';
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+  <div
+    class="mx-auto rounded rounded-3xl bg-black py-20 xl:w-[1200px]">
+    <main
+      class="mx-auto flex w-[90%] max-w-[400px] flex-col items-center justify-between xl:max-w-[1000px] xl:flex-row">
+      <div class="">
+        <h1
+          class="text-center font-title text-5xl text-white xsm:text-left xsm:text-6xl xl:text-[5rem]">
+          Pablo Penalva
+        </h1>
+        <h2
+          class="text-center font-title text-xl text-secondary xsm:text-left xl:text-2xl">
+          diseñador y desarrollador <br
+            class="xsm:hidden"
+          /> web freelance
+        </h2>
+        <p
+          class="mt-5 max-w-[400px] font-text text-white xl:max-w-[500px]">
+          Brindo soluciones personalizadas y efectivas para
+          pequeñas empresas y emprendedores. Me enfoco en
+          entender las necesidades y objetivos de mis
+          clientes para ofrecer un servicio de calidad que
+          los ayude a aumentar su presencia online y
+          alcanzar sus metas.
+        </p>
+      </div>
+      <Image
+        format="webp"
+        alt=""
+        src={foto}
+        width={400}
+        height={343.19}
+        quality={100}
+        class="mt-10 w-full max-w-[400px] rounded-2xl grayscale xl:mt-0"
+      />
+    </main>
+
+    <section class="">
+      <h2
+        class="mt-20 text-center font-title text-4xl text-white xsm:text-5xl xl:text-[4rem]">
+        Algunos de mis trabajos
+      </h2>
+
+      {
+        proyectos.map((proyecto) => {
+          return (
+            <div class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row">
+              <Image
+                format="webp"
+                alt=""
+                src={`/${proyecto.foto}.jpg`}
+                width={500}
+                height={230}
+                quality={100}
+                class="w-full max-w-[500px] rounded-2xl"
+              />
+              <div class="flex h-full w-full flex-col items-center gap-5">
+                <h3 class="font-title text-center text-3xl text-white">
+                  {proyecto.titulo}
+                </h3>
+                <p class="font-text max-w-xs   text-center text-white">
+                  {proyecto.descripcion}
+                </p>
+                <a
+                  href={proyecto.link}
+                  rel="noreferrer"
+                  target="_blank"
+                  class="font-text text-secondary inline rounded-2xl border-2 px-6 py-2 text-center text-xl duration-300 hover:bg-white hover:text-black ">
+                  visitar
+                </a>
+              </div>
+            </div>
+          );
+        })
+      }
+    </section>
+  </div>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<style></style>

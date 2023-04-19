@@ -1,0 +1,42 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from '@astrojs/image/components';
+import foto from '../Assets/Foto3.jpg';
+import { proyectos } from '../components/proyectos.json';
+---
+
+<Layout title="Welcome to Astro.">
+  <main
+    class="mx-auto flex w-[90%] max-w-[400px] flex-col items-center justify-between xl:max-w-[1000px] xl:flex-row">
+    <div class="">
+      <h1
+        class="text-center font-title text-5xl text-white xsm:text-left xsm:text-6xl xl:text-[5rem]">
+        Pablo Penalva
+      </h1>
+      <h2
+        class="text-center font-title text-xl text-white xsm:text-left xl:text-2xl">
+        diseñador y desarrollador <br class="xsm:hidden" /> web
+        freelance
+      </h2>
+      <p
+        class="mt-5 max-w-[400px] font-text text-white xl:max-w-[500px]">
+        Brindo soluciones personalizadas y efectivas para
+        pequeñas empresas y emprendedores. Me enfoco en
+        entender las necesidades y objetivos de mis clientes
+        para ofrecer un servicio de calidad que los ayude a
+        aumentar su presencia online y alcanzar sus metas.
+      </p>
+    </div>
+    <Image
+      format="webp"
+      alt=""
+      src={foto}
+      width={400}
+      height={343.19}
+      quality={100}
+      class="mt-10 w-full max-w-[400px] rounded-2xl grayscale xl:mt-0"
+    />
+  </main>
+
+  <section class="space-y-6"></section>
+</Layout>
