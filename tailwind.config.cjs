@@ -13,6 +13,9 @@ module.exports = {
       body: '#2F2F34',
     },
     extend: {
+      dropShadow: {
+        '3xl': '0px 0px 10px rgba(237, 193, 57, 1)',
+      },
       screens: {
         xsm: '475px',
         ...defaultTheme.screens,
