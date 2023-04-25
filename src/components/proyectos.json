@@ -1,6 +1,13 @@
 {
   "proyectos":[
     {
+      "titulo":"La Trucco",
+      "descripcion":"Estudio de formación de intérpretes y espacio de creación audiovisual en Bilbao.",
+      "construccion": "en desarrollo",
+      "foto": "LaTrucco",
+      "link": "https://la-trucco.vercel.app/"
+    },
+    {
       "titulo":"Polo & Wine",
       "descripcion":"Polo & Wine ofrece experiencias en el Reino Unido y Argentina para pasajeros individuales y pequeños grupos.",
       "foto": "Polo",
