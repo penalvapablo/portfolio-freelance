@@ -1,93 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from '@astrojs/image/components';
-import foto from '../Assets/Foto3.jpg';
-import { proyectos } from '../components/proyectos.json';
+
+import ProyectosSection from '../components/proyectosSection.astro';
+import HeaderSection from '../components/headerSection.astro';
 ---
 
 <Layout title="Pablo Penalva - Desarrollador Web">
   <div
     class="mx-auto bg-black px-6 py-20 drop-shadow-3xl md:w-[80%] md:rounded-3xl xl:w-[1200px]">
-    <main
-      class="relative mx-auto flex w-[90%] max-w-[400px] flex-col items-center justify-between xl:max-w-[1000px] xl:flex-row">
-      <div class="">
-        <h1
-          class="text-center font-title text-5xl text-white xsm:text-left xsm:text-6xl xl:text-[5rem]">
-          Pablo Penalva
-        </h1>
-        <h2
-          class="text-center font-title text-xl text-secondary xsm:text-left xl:text-2xl">
-          diseñador y desarrollador <br
-            class="xsm:hidden"
-          /> web freelance
-        </h2>
-        <p
-          class="mt-5 max-w-[400px] font-text text-white xl:max-w-[500px]">
-          Brindo soluciones personalizadas y efectivas para
-          pequeñas empresas y emprendedores. Me enfoco en
-          entender las necesidades y objetivos de mis
-          clientes para ofrecer un servicio de calidad que
-          los ayude a aumentar su presencia online y
-          alcanzar sus metas.
-        </p>
-      </div>
-      <Image
-        format="webp"
-        alt=""
-        src={foto}
-        width={400}
-        height={343.19}
-        quality={100}
-        id="element"
-        class="mt-10 w-full max-w-[400px] rounded-2xl grayscale duration-1000 xl:mt-0"
-      />
-    </main>
-
-    <section class="">
-      <h2
-        class="mt-20 text-center font-title text-4xl text-white xsm:text-5xl xl:text-[4rem]">
-        Algunos de mis trabajos
-      </h2>
-
-      {
-        proyectos.map((proyecto) => {
-          return (
-            <div class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row">
-              <Image
-                format="webp"
-                alt=""
-                src={`/${proyecto.foto}.jpg`}
-                width={500}
-                height={230}
-                quality={100}
-                class="w-full max-w-[500px] rounded-2xl"
-              />
-
-              <div class="flex h-full w-full flex-col items-center gap-5">
-                <h3 class="text-center font-title text-3xl text-white">
-                  {proyecto.titulo}
-                </h3>
-                {proyecto.construccion && (
-                  <p class="max-w-xs text-center font-text uppercase text-[#ef5454]">
-                    {proyecto.construccion}
-                  </p>
-                )}
-                <p class="max-w-xs text-center   font-text text-white">
-                  {proyecto.descripcion}
-                </p>
-                <a
-                  href={proyecto.link}
-                  rel="noreferrer"
-                  target="_blank"
-                  class="inline rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
-                  visitar
-                </a>
-              </div>
-            </div>
-          );
-        })
-      }
-    </section>
+    <HeaderSection />
+    <ProyectosSection />
   </div>
 </Layout>
 <script>

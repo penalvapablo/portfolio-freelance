@@ -1,0 +1,50 @@
+---
+import { proyectos } from './proyectos.json';
+import { Image } from '@astrojs/image/components';
+---
+
+<section class="">
+  <h2
+    class="mt-20 text-center font-title text-4xl text-white xsm:text-5xl xl:text-[4rem]">
+    Algunos de mis trabajos
+  </h2>
+
+  {
+    proyectos.map((proyecto) => {
+      return (
+        <div class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row">
+          <Image
+            format="webp"
+            alt=""
+            src={`/${proyecto.foto}.jpg`}
+            width={500}
+            height={230}
+            quality={100}
+            class="w-full max-w-[500px] rounded-2xl"
+          />
+
+          <div class="flex h-full w-full flex-col items-center gap-5">
+            <h3 class="text-center font-title text-3xl text-white">
+              {proyecto.titulo}
+            </h3>
+            {proyecto.construccion && (
+              <p class="max-w-xs text-center font-text uppercase text-[#ef5454]">
+                {proyecto.construccion}
+              </p>
+            )}
+            <p class="max-w-xs text-center   font-text text-white">
+              {proyecto.descripcion}
+            </p>
+            <a
+              href={proyecto.link}
+              rel="noreferrer"
+              target="_blank"
+              class="inline rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
+              visitar
+            </a>
+          </div>
+        </div>
+      );
+    })
+  }
+</section>
