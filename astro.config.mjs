@@ -1,10 +1,15 @@
 import { defineConfig } from 'astro/config';
-import image from "@astrojs/image";
-import tailwind from "@astrojs/tailwind";
+import image from '@astrojs/image';
+import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
-import react from "@astrojs/react";
+import vercel from '@astrojs/vercel/serverless';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [image(), tailwind(), react()]
+  integrations: [image(), tailwind(), react()],
+  output: 'server',
+  adapter: vercel({
+    analytics: true,
+  }),
 });
