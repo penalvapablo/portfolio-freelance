@@ -4,15 +4,16 @@ import { Image } from '@astrojs/image/components';
 ---
 
 <section class="">
-  <h2
+  <h3
     class="mt-20 text-center font-title text-4xl text-white xsm:text-5xl xl:text-[4rem]">
     Algunos de mis trabajos
-  </h2>
-
+  </h3>
   {
     proyectos.map((proyecto) => {
       return (
-        <div class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row">
+        <div
+          class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row"
+          id="proyecto">
           <Image
             format="webp"
             alt=""
@@ -24,9 +25,9 @@ import { Image } from '@astrojs/image/components';
           />
 
           <div class="flex h-full w-full flex-col items-center gap-5">
-            <h3 class="text-center font-title text-3xl text-white">
+            <h4 class="text-center font-title text-3xl text-white">
               {proyecto.titulo}
-            </h3>
+            </h4>
             {proyecto.construccion && (
               <p class="max-w-xs text-center font-text uppercase text-[#ef5454]">
                 {proyecto.construccion}

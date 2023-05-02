@@ -13,25 +13,39 @@ import HeaderSection from '../components/headerSection.astro';
   </div>
 </Layout>
 <script>
-  // const text = window.document.querySelector('#element')!;
-  // console.log(text);
-  // const arr = [text];
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('opacity-0');
+        entry.target.classList.add('opacity-100');
+        entry.target.classList.add('duration-[2000ms]');
+      }
+    });
+  });
 
-  // const observer = new IntersectionObserver((element) => {
-  //   if (element.isIntersecting) {
-  //     element.target.classList.add('opacity-100');
-  //   }
+  const h1 = window.document.querySelector('h1')!;
+  const h2 = window.document.querySelector('h2')!;
+  const p = window.document.querySelector('p')!;
+  const h3 = window.document.querySelector('h3')!;
+  const img = window.document.querySelector('img')!;
+  const socialLinks =
+    window.document.querySelector('#social-links')!;
+  const proyecto =
+    window.document.querySelectorAll('#proyecto')!;
 
-  //   // entries.forEach((entry) => {
-  //   //   if (entry.isIntersecting) {
-  //   //     entry.target.classList.remove('-translate-x-56');
-  //   //   } else {
-  //   //     entry.target.classList.add('-translate-x-56');
-  //   //   }
-  //   // });
-  // });
-
-  // observer.observe(text);
+  const elements = [
+    h1,
+    h2,
+    h3,
+    p,
+    img,
+    socialLinks,
+    ...proyecto,
+  ];
+  elements.forEach((e) => {
+    e.classList.add('opacity-0');
+    observer.observe(e);
+  });
 </script>
 
 <style></style>

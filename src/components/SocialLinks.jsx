@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SocialLinks = () => {
   return (
-    <div className="mt-3 flex justify-center gap-6 text-white xl:justify-start ">
+    <div
+      className="mt-3 flex justify-center gap-6 text-white opacity-0 xl:justify-start"
+      id="social-links">
       <a
         href="mailto:info.latrucco@gmail.com"
         className="h-8">
