@@ -24,11 +24,11 @@ import { Image } from '@astrojs/image/components';
             class="w-full max-w-[500px] rounded-2xl"
           />
 
-          <div class="flex h-full mt-3 w-full flex-col items-center gap-2 xl:mt-0">
+          <div class="mt-3 flex h-full w-full flex-col items-center gap-2 xl:mt-0">
             <h4 class="text-center font-title text-3xl text-white">
               {proyecto.titulo}
             </h4>
-            <h5 class="text-center font-title text-2xl text-secondary uppercase">
+            <h5 class="text-center font-title text-2xl uppercase text-secondary">
               {proyecto.lugar}
             </h5>
             {proyecto.construccion && (
@@ -43,7 +43,7 @@ import { Image } from '@astrojs/image/components';
               href={proyecto.link}
               rel="noreferrer"
               target="_blank"
-              class="inline rounded-2xl border-2 mt-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
+              class="mt-2 inline rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
               visitar
             </a>
           </div>
