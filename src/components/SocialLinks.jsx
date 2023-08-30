@@ -9,7 +9,7 @@ const SocialLinks = () => {
       className="mt-3 flex justify-center gap-6 text-white opacity-0 xl:justify-start"
       id="social-links">
       <a
-        href="mailto:penalva.dev@gmail.com"
+        href="mailto:penalva.pablo@gmail.com"
         aria-label="link to email"
         className="h-8">
         <FontAwesomeIcon
