@@ -1,0 +1,28 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+import ProyectosSection from '../../components/proyectosSection.astro';
+import HeaderSection from '../../components/headerSection.astro';
+import HabilidadesSection from '../../components/habilidadesSection.astro';
+---
+
+<Layout title="Pablo Penalva - Web Developer">
+  <div
+    class="mx-auto max-w-[1200px] bg-black px-6 py-20 drop-shadow-3xl md:w-[80%] md:min-w-[768px] md:rounded-3xl">
+    <div
+      class="mx-auto mb-10 flex justify-center gap-1 font-title text-xl text-white">
+      <a href="/">Español</a>
+      /
+      <a
+        href="/en"
+        class="border-b-2 border-secondary"
+        >English</a
+      >
+    </div>
+    <HeaderSection lang="en" />
+
+    <HabilidadesSection lang="en" />
+
+    <ProyectosSection lang="en" />
+  </div>
+</Layout>

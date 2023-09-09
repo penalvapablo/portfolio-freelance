@@ -1,0 +1,74 @@
+{
+  "proyectos":[
+    {
+      "titulo":{
+        "es":"Proyecto de Alkemy ",
+        "en":"Alkemy Proyect"
+      },
+      "descripcion":{
+        "es": "Backend de una ONG ficticia con un equipo y un tech lead, con enfasis en la aplicación de Scrum y Git flow.",
+        "en": "Backend of a Fictional NGO with a team and a tech lead, with emphasis on the use of Scrum and Git Flow."
+      },
+      "foto": "Alkemy",
+      "tecnologias": ["Node" , "Express", "MySQL", "Sequelize", "Scrum", "Sendgrid", "Amazon S3", "Swagger", "JWT"],
+      "repositorio": "hhttps://github.com/penalvapablo/OT198-Server"
+    },
+    {
+      "titulo":{
+        "es":"Piedra Papel o Tijera",
+        "en":"Rock, Paper, Scissors"
+      },
+      "descripcion":{
+        "es":"Desafio de Frontend Mentor",
+        "en":"Frontend Mentor Challenge."
+      },
+      "linkChallenge": "https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH",
+      "foto": "rock_paper_scissors",
+      "tecnologias": ["React" , "TypeScript", "SASS", "CSS"],
+      "repositorio": "https://github.com/penalvapablo/Milvus",
+      "link": "https://rock-paper-scissors-penalva.netlify.app/"
+    },
+    {
+      "titulo":{
+        "es":"Disney API",
+        "en":"Disney API"
+      },
+      "descripcion":{
+        "es":"Desafío de ingreso al proceso de Aceleración de Alkemy",
+        "en":"Entry challenge for Alkemy's Acceleration Program."
+      },
+      "linkChallenge":"https://www.alkemy.org",
+      "foto": "disney",
+      "tecnologias": ["React" , "Astro", "Tailwind"],
+      "repositorio": "https://github.com/penalvapablo/BackendAlkemyChallenge"
+    },
+    {
+      "titulo":{
+        "es":"Calculadora",
+        "en":"Calculator"
+      },
+      "descripcion":{
+        "es":"Desafio de Frontend Mentor.",
+        "en":"Frontend Mentor Challenge."
+      },
+      "linkChallenge": "https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29",
+      "foto": "calculadora",
+      "tecnologias": ["JavaScript" , "SASS", "CSS", "HTML"],
+      "repositorio": "https://github.com/penalvapablo/03-calculator",
+      "link": "https://calculator-frontendmentor-pablo.netlify.app/"
+    },
+    {
+      "titulo":{
+        "es":"Ecommerce Backend",
+        "en":"Ecommerce Backend"
+      },
+      "descripcion":{
+        "es":"Proyecto final del curso de Backend con Node.js de Coderhouse",
+        "en":"Final project for the Backend Course with Node.js at Coderhouse."
+      },
+      "foto": "coderhouse",
+      "tecnologias": ["Node" , "Express", "MongoDB", "Mongoose", "Socket.io", "JWT", "EJS"],
+      "repositorio": "https://github.com/penalvapablo/CoderhouseBackendProyect"
+    }   
+  ]
+}

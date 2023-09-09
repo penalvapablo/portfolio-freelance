@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { proyectos } from '../components/proyectos/clientes.json';
+import { Image } from '@astrojs/image/components';
+import SocialLinks from '../components/SocialLinks';
+---
+
+<Layout title="Proyectos Clientes - Pablo Penalva">
+  <div
+    class="mx-auto bg-black px-6 py-20 drop-shadow-3xl md:w-[80%] md:rounded-3xl xl:w-[75rem] xl:px-0">
+    <div
+      class="mx-auto mb-14 flex max-w-[80%] flex-col items-center justify-between gap-3 xsm:flex-row">
+      <!-- <BackBtn /> -->
+      <a
+        href="/"
+        aria-label="link a proyectos personales"
+        class="mt-2 inline rounded-2xl border-2 px-4 py-2 text-center font-text text-xl text-white duration-300 hover:bg-white hover:text-black"
+        >Home</a
+      >
+      <a
+        href="personales"
+        aria-label="link a proyectos personales"
+        class="mt-2 inline rounded-2xl border-2 px-4 py-2 text-center font-text text-xl text-white duration-300 hover:bg-white hover:text-black"
+        >Proyectos personales</a
+      >
+    </div>
+    <h1
+      class="] text-center font-title text-5xl text-secondary md:text-6xl">
+      Proyectos para clientes
+    </h1>
+    {
+      proyectos.map((proyecto) => {
+        return (
+          <>
+            <h4 class="mb-10 mt-14 text-center font-title text-5xl text-white">
+              {proyecto.titulo}
+            </h4>
+            <div
+              class="mx-auto mt-10 flex max-w-4xl flex-col items-center justify-center gap-3 xl:flex-row "
+              id="proyecto">
+              <Image
+                format="webp"
+                alt=""
+                src={`/clientes/${proyecto.foto}.jpg`}
+                width={500}
+                height={300}
+                quality={100}
+                class="w-full max-w-[500px] rounded-2xl"
+              />
+
+              <div class="mt-3 flex h-full w-full flex-col items-center gap-2 xl:mt-0 ">
+                <p class="max-w-xs text-center   font-text text-white">
+                  {proyecto.descripcion.es}
+                </p>
+                <h5 class="mb-2 mt-2 text-center font-title text-2xl text-white">
+                  Hecho con
+                </h5>
+                <div class="mb-8 flex flex-wrap justify-center gap-4 font-text text-lg text-white">
+                  {proyecto.tecnologias.map(
+                    (tecnologia) => {
+                      return (
+                        <p class="rounded-2xl border-y-2 border-dashed px-3 py-2">
+                          {tecnologia}
+                        </p>
+                      );
+                    }
+                  )}
+                </div>
+                <div class="flex flex-wrap justify-center gap-4">
+                  <a
+                    href={proyecto.link}
+                    rel="noreferrer"
+                    class="mt-2 inline w-40 rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
+                    visitar
+                  </a>
+                  {proyecto.repositorio && (
+                    <a
+                      href={proyecto.repositorio}
+                      rel="noreferrer"
+                      class="mt-2 inline w-40 rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
+                      repositorio
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div class="mx-auto mt-10 h-1 w-[80%] max-w-[900px] bg-white " />
+          </>
+        );
+      })
+    }
+    <div class="h-10"></div>
+    <SocialLinks />
+  </div>
+</Layout>

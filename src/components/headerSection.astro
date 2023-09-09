@@ -1,30 +1,25 @@
 ---
 import { Image } from '@astrojs/image/components';
-import foto from '../Assets/Foto3.jpg';
+import foto from '../Assets/Foto.jpg';
 import SocialLinks from './SocialLinks';
+const { lang } = Astro.props;
 ---
 
 <main
-  class="relative mx-auto flex w-[90%] max-w-[400px] flex-col items-center justify-between xl:max-w-[1000px] xl:flex-row">
+  class="relative mx-auto flex w-[90%] max-w-[400px] flex-col items-center justify-between xl:max-w-[1000px]">
   <div class="">
     <h1
       class="text-center font-title text-5xl text-white xsm:text-left xsm:text-6xl xl:text-[5rem]">
       Pablo Penalva
     </h1>
     <h2
-      class="text-center font-title text-xl text-secondary xsm:text-left xl:text-2xl">
-      Desarrollador web
+      class="text-center font-title text-3xl text-secondary">
+      {
+        lang === 'en'
+          ? 'Web Developer'
+          : 'Desarrollador web'
+      }
     </h2>
-    <p
-      class="mt-5 max-w-[400px] font-text text-white xl:max-w-[500px]">
-      Diseño y desarrollo sitios web a medida para pequeñas
-      empresas y emprendedores.<br /> Puedo crear desde páginas
-      personalizadas con código hasta soluciones versátiles con
-      WordPress.<br /> Me enfoco en entender las necesidades
-      y objetivos de mis clientes para ofrecer un servicio de
-      calidad que los ayude a aumentar su presencia online y
-      alcanzar sus metas.
-    </p>
     <SocialLinks />
   </div>
   <Image
@@ -35,6 +30,6 @@ import SocialLinks from './SocialLinks';
     height={343.19}
     quality={100}
     loading={'eager'}
-    class="mt-10 w-full max-w-[400px] rounded-2xl grayscale xl:mt-0"
+    class="mt-10 w-full max-w-[360px] rounded-2xl grayscale"
   />
 </main>

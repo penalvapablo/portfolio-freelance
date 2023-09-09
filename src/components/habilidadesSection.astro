@@ -1,0 +1,57 @@
+---
+const { lang } = Astro.props;
+---
+
+<section>
+  <h3
+    class="mt-16 text-center font-title text-5xl text-secondary xl:text-6xl">
+    {lang === 'en' ? 'Skills' : 'Habilidades'}
+  </h3>
+  <ul
+    class="mx-auto my-8 flex max-w-3xl flex-col flex-wrap items-center justify-center gap-4 px-10 font-text text-white sm:flex-row sm:gap-6">
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      JavaScript
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      React
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      TypeScript
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      Node
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      Express
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      MongoDB / Mongoose
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      MySQL / Sequelize
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      Git
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      WordPress
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      HTML
+    </li>
+    <li
+      class="w-fit rounded-2xl border-y-2 border-dashed px-3 py-2 text-xl">
+      CSS / Sass / Tailwind
+    </li>
+  </ul>
+</section>

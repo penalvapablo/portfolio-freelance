@@ -1,50 +1,33 @@
 ---
-import { proyectos } from './proyectos.json';
-import { Image } from '@astrojs/image/components';
+const { lang } = Astro.props;
 ---
 
 <section class="">
   <h3
-    class="mt-20 text-center font-title text-4xl text-white xsm:text-5xl xl:text-[4rem]">
-    Algunos de mis trabajos
+    class="mt-16 text-center font-title text-5xl text-secondary xl:text-6xl">
+    Portfolio
   </h3>
-  {
-    proyectos.map((proyecto) => {
-      return (
-        <div
-          class="mx-auto mt-16 flex max-w-[900px] flex-col items-center justify-center gap-3 xl:flex-row"
-          id="proyecto">
-          <Image
-            format="webp"
-            alt=""
-            src={`/clientes/${proyecto.foto}.jpg`}
-            width={500}
-            height={230}
-            quality={100}
-            class="w-full max-w-[500px] rounded-2xl"
-          />
-
-          <div class="mt-3 flex h-full w-full flex-col items-center gap-2 xl:mt-0">
-            <h4 class="text-center font-title text-3xl text-white">
-              {proyecto.titulo}
-            </h4>
-            <h5 class="text-center font-title text-2xl uppercase text-secondary">
-              {proyecto.lugar}
-            </h5>
-
-            <p class="max-w-xs text-center   font-text text-white">
-              {proyecto.descripcion}
-            </p>
-            <a
-              href={proyecto.link}
-              rel="noreferrer"
-              target="_blank"
-              class="mt-2 inline rounded-2xl border-2 px-6 py-2 text-center font-text text-xl text-secondary duration-300 hover:bg-white hover:text-black ">
-              visitar
-            </a>
-          </div>
-        </div>
-      );
-    })
-  }
+  <div
+    class="mt-10 flex flex-row flex-wrap justify-center gap-5 text-2xl md:gap-10">
+    <a
+      href={lang === 'en' ? '/en/clientes' : 'clientes'}
+      aria-label="link a proyectos de clientes"
+      class="mt-2 w-80 rounded-2xl border-2 py-4 text-center font-text text-white duration-300 hover:bg-white hover:text-black"
+      >{
+        lang === 'en'
+          ? 'Client Projects'
+          : 'Proyectos para clientes'
+      }</a
+    >
+    <a
+      href={lang === 'en' ? '/en/personales' : 'personales'}
+      aria-label="link a proyectos personales"
+      class="mt-2 w-80 rounded-2xl border-2 py-4 text-center font-text text-white duration-300 hover:bg-white hover:text-black"
+      >{
+        lang === 'en'
+          ? 'Personal Projects'
+          : 'Proyectos personales'
+      }</a
+    >
+  </div>
 </section>
