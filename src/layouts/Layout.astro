@@ -1,15 +1,16 @@
 ---
 export interface Props {
   title: string;
+  lang: string;
 }
 
-const { title } = Astro.props;
+const { title, lang } = Astro.props;
 import '@fontsource/work-sans';
 import '@fontsource/marcellus';
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta
