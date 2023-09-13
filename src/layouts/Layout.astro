@@ -2,9 +2,10 @@
 export interface Props {
   title: string;
   lang: string;
+  description: string;
 }
 
-const { title, lang } = Astro.props;
+const { title, lang, description } = Astro.props;
 import '@fontsource/work-sans';
 import '@fontsource/marcellus';
 ---
@@ -29,7 +30,7 @@ import '@fontsource/marcellus';
     <title>{title}</title>
     <meta
       name="description"
-      content="Soluciones digitales para pequeñas empresas y emprendedores"
+      content={description}
     />
   </head>
   <body class="mx-auto bg-body md:py-16 xl:py-24">
