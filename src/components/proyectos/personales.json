@@ -11,7 +11,7 @@
       },
       "foto": "Alkemy",
       "tecnologias": ["Node" , "Express", "MySQL", "Sequelize", "Scrum", "Sendgrid", "Amazon S3", "Swagger", "JWT"],
-      "repositorio": "hhttps://github.com/penalvapablo/OT198-Server"
+      "repositorio": "https://github.com/penalvapablo/OT198-Server"
     },
     {
       "titulo":{
