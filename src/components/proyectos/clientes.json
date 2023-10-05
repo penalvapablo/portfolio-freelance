@@ -13,6 +13,18 @@
       "link": "https://www.milvus.travel/"
     },
     {
+      "titulo":"Barf",
+      "lugar": "Argentina",
+      "descripcion": {
+        "es":"Calculadora de dieta BARF para una veterinaria. Es un tipo de dieta que varía según ciertos factores de la mascota.",
+        "en":"BARF diet calculator for a veterinarian. It's a type of diet that varies according to certain factors of the pet."
+      },
+      "foto": "Barf",
+      "tecnologias": ["React", "TypeScript", "Astro", "Tailwind"],
+      "repositorio": "https://github.com/penalvapablo/barf_calculator",
+      "link": "https://www.calculadorabarf.online/"
+    },
+    {
       "titulo":"Polo & Wine",
       "lugar": "Londres",
       "descripcion": {
